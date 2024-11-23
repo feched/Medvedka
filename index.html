@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медал</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="calendar-container">
+      <header class="sports-club-header">
+          <img loading="lazy"
+           src="assets/iconbear.png"
+           class="club-logo"
+            alt="Чёрные медведи - ПОЛИТЕХ sports club logo"/>
+          <h1 class="club-title">
+            Спортивный клуб "Чёрные медведи - ПОЛИТЕХ"
+          </h1>
+      </header>
+    
+      <nav class="sport-tabs">
+        <div class="tab-container">
+          <button class="tab-active">Баскетбол</button>
+          <button class="tab-inactive">Футбол</button>
+        </div>
+      </nav>
+    
+      <main class="main-content">
+        <div class="content-wrapper">
+          <div class="date-selector">
+            <div class="date-input">
+              <p class="date-label">Выберите дату матча...</p>
+              <div class="icon-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/18747c064caf23ecf09ac68df083dbc3fb0fae665bbacc473694078946681b86?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Calendar" class="calendar-icon" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25284f77e0e36e5ee1b79bf65029664c7c09363b30a83b6deefb9db8d6090277?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Dropdown Arrow" class="arrow-icon" />
+              </div>
+            </div>
+            <button class="update-btn">Обновить</button>
+          </div>
+    
+          <section class="calendar-container">
+            <div class="calendar-wrapper">
+              <header class="calendar-header">
+                <button id="btnPrev" class="calendar-nav-btn">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ced42dc9e5bc98c5ce2526c76402008e3ddd7a4f504b9097c701b0be8ac1dfe?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Previous Month" loading="lazy"/>
+                </button>
+                <div class="month-year-select">
+                  <div class="month-select">
+                    <div class="select-wrapper">
+                      <span id="monthDisplay"></span>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9eb46eb2e09d7176141f55b3915344af07eea3c609d1c2c8567bf09d79f7e797?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Select Month" class="select-icon" loading="lazy"/>
+                    </div>
+                  </div>
+                  <div class="year-select">
+                    <div class="select-wrapper">
+                      <span id="yearDisplay"></span>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9eb46eb2e09d7176141f55b3915344af07eea3c609d1c2c8567bf09d79f7e797?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Select Year" class="select-icon" loading="lazy"/>
+                    </div>
+                  </div>
+                </div>
+                <button id="btnNext" class="calendar-nav-btn">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/80b71f89af7a97a294702c9903e63eb05565c32395cb3556765bca79469ca225?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Next Month" loading="lazy"/>
+                </button>
+              </header>
+              <div class="calendar-grid" id="divCal">
+                <!-- Подключаем JavaScript-файл -->
+                <script src="function.js"></script>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    
+      <footer class="site-footer">
+        <p class="copyright">© 2024-2025 ПАО "МЕТРОПОЛИС"</p>
+        <a href="https://www.spbstu.ru" class="university-link">ПОЛИТЕХ: https://www.spbstu.ru</a>
+        <div class="contact-wrapper">
+          <img src="assets/image_23e302ff.png" alt="Telegram Icon" class="telegram-icon" />
+          <p class="telegram-handle">Telegram: @workshop_on_Grisha</p>
+        </div>
+      </footer>
+    </section>  
+</body>
+</html>
+
+

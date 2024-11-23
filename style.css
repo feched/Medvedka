@@ -1,0 +1,544 @@
+/* Общие стили */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: 'Lexend', sans-serif;
+  background: #28283b;
+  color: #444;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Шапка сайта */
+.sports-club-header {
+  border-radius: 0 0 30px 30px;
+  background-color: rgba(4, 80, 67, 1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 70px;
+  box-sizing: border-box;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 17px;
+  align-items: center;
+  justify-content: center;
+}
+
+.club-logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 90px;
+  border-radius: 52px;
+}
+
+.club-title {
+  color: rgba(232, 230, 227, 1);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+  text-align: center;
+  flex-grow: 1;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .sports-club-header {
+    padding: 0 20px;
+  }
+
+  .club-title {
+    font-size: 28px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .club-logo {
+    margin-bottom: 10px;
+  }
+}
+
+/* Календарь и табы */
+.calendar-container {
+  border-radius: 0 0 16px 16px;
+  border: 1px solid #fff;
+  background: #f5f5f5;
+  box-shadow: 0 1px 2px rgba(0, 14, 51, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font: 500 18px/1.2 sans-serif;
+  color: #1f1f1f;
+  padding: 24px;
+}
+
+.sport-tabs {
+  display: flex;
+  margin-top: 22px;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.tab-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  letter-spacing: -0.32px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.tab-active,
+.tab-inactive {
+  border-radius: 30px 30px 0 0;
+  color: #e8e6e3;
+  flex: 1;
+  padding: 26px 70px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-active {
+  background: #045043;
+}
+
+.tab-inactive {
+  border: 2px solid #045043;
+  border-bottom: none;
+  color: #045043;
+  padding: 22px 70px 22px 87px;
+}
+
+/* Основное содержимое */
+.main-content {
+  border-radius: 0 30px 30px 30px;
+  background: #c0d6d2;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 135px 39px;
+  border: 2px solid #045043;
+}
+
+.content-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 1244px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.date-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-input {
+  border-radius: 8px;
+  background: #e8e6e3;
+  display: flex;
+  width: 100%;
+  max-width: 426px;
+  gap: 40px 51px;
+  padding: 9px 15px;
+  border: 1px solid #045043;
+}
+
+.date-label {
+  color: #045043;
+  letter-spacing: -0.24px;
+  text-align: center;
+  flex: 1;
+  width: 100%;
+  max-width: 276px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.icon-wrapper {
+  align-self: start;
+  display: flex;
+  gap: 11px;
+}
+
+.calendar-icon {
+  aspect-ratio: 1.83;
+  object-fit: contain;
+  width: 22px;
+  align-self: start;
+  margin-top: 9px;
+}
+
+.arrow-icon {
+  aspect-ratio: 0.96;
+  object-fit: contain;
+  width: 24px;
+}
+
+.update-btn {
+  border-radius: 122px;
+  background: #045043;
+  margin-top: 40px;
+  color: #d9d9d9;
+  text-align: center;
+  letter-spacing: -0.32px;
+  padding: 33px 70px;
+  font-size: 32px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+  background: #03453c;
+}
+
+/* Анализ */
+.analysis-section {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lexend', sans-serif;
+  text-align: center;
+  line-height: 1;
+}
+
+.analysis-header {
+  border-radius: 30px 30px 0 0;
+  background: #045043;
+  color: #e8e6e3;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.32px;
+  padding: 23px 70px;
+}
+
+/* Футер */
+.site-footer {
+  background: #045043;
+  display: flex;
+  margin-top: 23px;
+  width: 100%;
+  align-items: center;
+  gap: 40px 100px;
+  color: #e8e6e3;
+  letter-spacing: -0.2px;
+  flex-wrap: wrap;
+  padding: 10px 41px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.copyright,
+.university-link {
+  flex: 1;
+  margin: auto 0;
+}
+
+.university-link {
+  text-decoration: underline;
+}
+
+.contact-wrapper {
+  align-self: stretch;
+  display: flex;
+  gap: 18px;
+}
+
+.telegram-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 50px;
+}
+
+.telegram-handle {
+  flex: 1;
+  margin: auto 0;
+}
+
+/* Календарь */
+.calendar-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 378px;
+  flex-direction: column;
+}
+
+.calendar-header {
+  display: flex;
+  width: 100%;
+  gap: 18px;
+  font: 700 24px/1.2 sans-serif;
+  color: #141414;
+  letter-spacing: -0.24px;
+}
+
+.calendar-nav-btn {
+  aspect-ratio: 1;
+  width: 44px;
+  box-shadow: 0 1px 1px rgba(0, 14, 51, 0.05);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.month-year-select {
+  display: flex;
+  align-items: start;
+  gap: 2px;
+}
+
+.month-select, .year-select {
+  border-radius: 6px;
+  box-shadow: 0 1px 1px rgba(0, 14, 51, 0.05);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.month-select {
+  width: 159px;
+}
+
+.year-select {
+  width: 92px;
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.select-icon {
+  width: 8px;
+  aspect-ratio: 0.33;
+}
+
+.weekdays {
+  display: flex;
+  margin-top: 12px;
+}
+
+.weekday {
+  border-radius: 4px;
+  width: 54px;
+  padding: 13px 3px;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: flex;
+  margin-top: 12px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.week {
+  display: flex;
+}
+
+.day {
+  border-radius: 4px;
+  width: 54px;
+  padding: 0 2px;
+}
+
+.day-content {
+  border-radius: 6px;
+  min-height: 44px;
+  padding: 13px;
+  text-align: center;
+}
+
+.current-month {
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 14, 51, 0.05);
+}
+
+.other-month {
+  color: rgba(4, 80, 67, 0.15);
+}
+
+.selected {
+  background: rgba(4, 80, 67, 1);
+  color: #fff;
+  text-decoration: underline;
+}
+
+.highlighted {
+  background: rgba(4, 80, 67, 0.6);
+}
+
+.faded {
+  background: rgba(4, 80, 67, 0.4);
+}
+
+@media (max-width: 991px) {
+  .calendar-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+table {
+  clear: both;
+  width: 100%;
+  border: 1px solid #dcdcff;
+  border-radius: 3px;
+  border-collapse: collapse;
+  color: #444;
+}
+
+td {
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #dcdcff;
+  border-top: 1px solid #dcdcff;
+  width: 14.28571429%;
+}
+
+td.not-current {
+  color: #c0c0c0;
+}
+
+td.today {
+  font-weight: 700;
+  color: #28283b;
+  font-size: 1.5em;
+}
+
+thead td {
+  border: none;
+  color: #28283b;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #c0c0c0;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+  color: #28283b;
+  font-weight: bold;
+}
+
+.calendar-widget {
+  margin-top: -20px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 14, 51, 0.25);
+  background: #f5f5f5;
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.calendar-wrapper {
+  padding: 12px;
+}
+
+#btnPrev,
+#btnNext {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  height: 40px;
+  min-width: 50px;
+}
+
+#divCal {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+/* Медиа-запросы */
+@media (max-width: 991px) {
+  .header-banner,
+  .sport-tabs,
+  .main-content,
+  .site-footer {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .tab-active,
+  .tab-inactive,
+  .update-btn,
+  .analysis-header {
+    padding: 20px;
+    white-space: normal;
+  }
+
+  .content-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .date-selector {
+    max-width: 100%;
+  }
+
+  .update-btn {
+    margin-top: 40px;
+  }
+}
