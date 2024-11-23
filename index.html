@@ -37,59 +37,71 @@
               </div>
             </div>
             
-<section class="match-result-container">
-  <h2 class="match-result-title">Итог матча</h2>
-  <div class="icons-wrapper">
-    <img
-      loading="lazy"
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/18747c064caf23ecf09ac68df083dbc3fb0fae665bbacc473694078946681b86?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103"
-      class="icon-score"
-      alt="Match score indicator"
-    />
-    <img
-      loading="lazy"
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/25284f77e0e36e5ee1b79bf65029664c7c09363b30a83b6deefb9db8d6090277?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103"
-      class="icon-result"
-      alt="Match result status"
-    />
-  </div>
-</section>
-<button class="add-match-button" onclick="openPopup()" tabindex="0" aria-label="Add match">
-  Добавить матч
-</button>
-
-<div id="popup" class="popup hidden">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <section class="auth-container">
-      <form class="auth-card">
-        <h1 class="auth-title">Авторизация</h1>
-        
-        <label for="username" class="visually-hidden">Логин</label>
-        <input type="text" 
-               id="username" 
-               class="auth-input auth-input-username" 
-               placeholder="Логин"
-               required
-               aria-label="Логин">
-    
-        <label for="password" class="visually-hidden">Пароль</label>
-        <input type="password" 
-               id="password" 
-               class="auth-input auth-input-password" 
-               placeholder="Пароль"
-               required
-               aria-label="Пароль">
-    
-        <button type="submit" class="auth-submit">Войти</button>
-      </form>
-    </section>
-    
-  </div>
-</div>
+            <section class="match-result-container">
+              <h2 class="match-result-title">Итог матча</h2>
+              <div class="icons-wrapper">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/18747c064caf23ecf09ac68df083dbc3fb0fae665bbacc473694078946681b86?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103"
+                  class="icon-score"
+                  alt="Match score indicator"
+                />
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/25284f77e0e36e5ee1b79bf65029664c7c09363b30a83b6deefb9db8d6090277?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103"
+                  class="icon-result"
+                  alt="Match result status"
+                />
+              </div>
+            </section>
+            <button id="open-popup" class="add-match-button">Добавить матч</button>
           </div>
-          
-    
+<div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn " id="close-popup">&times;</span>
+        <section class="auth-container">
+          <form class="auth-card">
+            <h1 class="auth-title">Авторизация</h1>
+            
+            <label for="username" class="visually-hidden">Логин</label>
+            <input type="text" 
+                   id="username" 
+                   class="auth-input auth-input-username" 
+                   placeholder="Логин"
+                   required
+                   aria-label="Логин">
+        
+            <label for="password" class="visually-hidden">Пароль</label>
+            <input type="password" 
+                   id="password" 
+                   class="auth-input auth-input-password" 
+                   placeholder="Пароль"
+                   required
+                   aria-label="Пароль">
+        
+            <button type="submit" class="auth-submit">Войти</button>
+          </form>
+        </section>
+    </div>
+</div>
+
+<script>
+    const openPopup = document.getElementById('open-popup');
+    const closePopup = document.getElementById('close-popup');
+    const popup = document.getElementById('popup');
+
+    openPopup.addEventListener('click', () => {
+        popup.style.display = 'flex';
+    });
+
+    closePopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+</script>
+    </div>
+
+
           <section class="calendar-container">
             <div class="calendar-wrapper">
               <header class="calendar-header">
