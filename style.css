@@ -655,3 +655,128 @@ thead td {
     padding: 0 20px;
   }
 }
+
+.popup {
+  display: none; /* Скрывает popup по умолчанию */
+  position: fixed; /* Фиксированное положение */
+  z-index: 1000; /* Показывает поверх других элементов */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Полупрозрачный черный фон */
+}
+
+.popup-content {
+  margin: 15% auto;
+  padding: 20px;
+  max-width: 400px;
+  min-height: 200px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.19);
+  background: white;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-weight: bold;
+  transition: all 0.2s ease-out;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.auth-container {
+  display: flex;
+  max-width: 550px;
+  flex-direction: column;
+  color: rgba(4, 80, 67, 0.6);
+  letter-spacing: -0.32px;
+  font: 700 32px/1 Lexend, sans-serif;
+}
+
+.auth-card {
+  border-radius: 30px;
+  background-color: rgba(210, 218, 219, 1);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 49px 64px;
+  border: 2px solid rgba(4, 80, 67, 1);
+}
+
+.auth-title {
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  align-self: center;
+}
+
+.auth-input {
+  border-radius: 24px;
+  background-color: rgba(238, 238, 238, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 24px;
+  width: 100%;
+}
+
+.auth-input-username {
+  margin: 35px 0 0;
+}
+
+.auth-input-password {
+  margin: 22px 0 0;
+}
+
+.auth-submit {
+  border-radius: 122px;
+  background-color: rgba(4, 80, 67, 1);
+  color: rgba(217, 217, 217, 1);
+  text-align: center;
+  padding: 23px 70px;
+  border: none;
+  width: 300px;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .auth-container {
+    white-space: initial;
+  }
+
+  .auth-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .auth-input {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+
+  .auth-submit {
+    padding: 23px 20px;
+  }
+}

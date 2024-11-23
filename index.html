@@ -54,9 +54,39 @@
     />
   </div>
 </section>
-<button class="add-match-button" tabindex="0" aria-label="Add match">
+<button class="add-match-button" onclick="openPopup()" tabindex="0" aria-label="Add match">
   Добавить матч
 </button>
+
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <section class="auth-container">
+      <form class="auth-card">
+        <h1 class="auth-title">Авторизация</h1>
+        
+        <label for="username" class="visually-hidden">Логин</label>
+        <input type="text" 
+               id="username" 
+               class="auth-input auth-input-username" 
+               placeholder="Логин"
+               required
+               aria-label="Логин">
+    
+        <label for="password" class="visually-hidden">Пароль</label>
+        <input type="password" 
+               id="password" 
+               class="auth-input auth-input-password" 
+               placeholder="Пароль"
+               required
+               aria-label="Пароль">
+    
+        <button type="submit" class="auth-submit">Войти</button>
+      </form>
+    </section>
+    
+  </div>
+</div>
           </div>
           
     
