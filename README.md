@@ -9,7 +9,7 @@
 Стек-технологий: Excel - как инструмент анализа данных,  язык программирования - python, IDE - Visual Studio Code, Google Colab, HTML+CSS+Django для работы с веб-приложением, figma - разработка прототипа приложения.
 
 
-весь основной код находится в [Google Colab](https://colab.research.google.com/drive/1enGAUXb9lzJtIhWKtFMVhv_GOtLqXWNU?usp=sharing)
+весь основной код модели анализа находится в [Google Colab](https://colab.research.google.com/drive/1enGAUXb9lzJtIhWKtFMVhv_GOtLqXWNU?usp=sharing)
 
 Менеджер Дмитрий Берников
 Навыки: Аналитический склад ума, нестандартный подход к решениям, умение быть лидером и работать в команде,
