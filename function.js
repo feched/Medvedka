@@ -145,3 +145,37 @@ window.onload = function() {
 function getId(id) {
     return document.getElementById(id);
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.sport-tabs button');
+    const basketballCalendar = document.getElementById('basketballCalendar');
+    const footballCalendar = document.getElementById('footballCalendar');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+
+            // Деактивируем все вкладки
+            tabs.forEach(t => {
+                t.classList.remove('tab-active');
+                t.classList.add('tab-inactive');
+            });
+
+            // Активируем выбранную вкладку
+            this.classList.remove('tab-inactive');
+            this.classList.add('tab-active');
+
+            // Скрываем все календари
+            basketballCalendar.style.display = 'none';
+            footballCalendar.style.display = 'none';
+
+            // Отображаем выбранный календарь
+            if (tabId === 'basketball') {
+                basketballCalendar.style.display = 'block';
+            } else if (tabId === 'football') {
+                footballCalendar.style.display = 'block';
+            }
+        });
+    });
+});

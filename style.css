@@ -127,6 +127,27 @@ a {
   font-weight: 700;
 }
 
+.tab-active {
+  background-color: #007BFF;
+  color: white;
+  border-bottom: 2px solid #007BFF;
+}
+
+.tab-inactive {
+  background-color: #f8f9fa;
+  color: #007BFF;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-container button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+}
+
+
 .tab-active,
 .tab-inactive {
   border-radius: 30px 30px 0 0;
@@ -540,5 +561,97 @@ thead td {
 
   .update-btn {
     margin-top: 40px;
+  }
+}
+
+.calendar-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+}
+
+.calendar-dropdown.show {
+  display: block;
+}
+
+.match-result-container {
+  border-radius: 8px;
+  background-color: rgba(232, 230, 227, 1);
+  display: flex;
+  margin-top: 10px;
+  width: 426px;
+  max-width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 11px 12px 11px 80px;
+  border: 1px solid rgba(4, 80, 67, 1);
+}
+
+.match-result-title {
+  color: rgba(4, 80, 67, 1);
+  letter-spacing: -0.24px;
+  text-align: center;
+  margin: auto 0;
+  font: 700 24px Lexend, sans-serif;
+}
+
+.icons-wrapper {
+  display: flex;
+  gap: 11px;
+}
+
+.icon-score {
+  aspect-ratio: 1.83;
+  object-fit: contain;
+  object-position: center;
+  width: 22px;
+  align-self: start;
+  margin-top: 9px;
+}
+
+.icon-result {
+  aspect-ratio: 0.96;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+}
+
+@media (max-width: 991px) {
+  .match-result-container {
+    padding-left: 20px;
+  }
+}
+
+.add-match-button {
+  border-radius: 122px;
+  background-color: rgba(207, 207, 207, 1);
+  margin: 22px 0 0;
+  color: rgba(4, 80, 67, 1);
+  text-align: center;
+  letter-spacing: -0.32px;
+  padding: 18px 70px 10px;
+  font: 700 32px/1 Lexend, sans-serif;
+  border: 2px solid rgba(4, 80, 67, 1);
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .add-match-button {
+    max-width: 100%;
+    padding: 0 20px;
   }
 }

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
     <section class="calendar-container">
       <header class="sports-club-header">
           <img loading="lazy"
@@ -20,8 +21,8 @@
     
       <nav class="sport-tabs">
         <div class="tab-container">
-          <button class="tab-active">Баскетбол</button>
-          <button class="tab-inactive">Футбол</button>
+          <button class="tab-active" data-tab="basketball">Баскетбол</button>
+          <button class="tab-inactive" data-tab="football">Футбол</button>
         </div>
       </nav>
     
@@ -35,8 +36,29 @@
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25284f77e0e36e5ee1b79bf65029664c7c09363b30a83b6deefb9db8d6090277?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103" alt="Dropdown Arrow" class="arrow-icon" />
               </div>
             </div>
-            <button class="update-btn">Обновить</button>
+            
+<section class="match-result-container">
+  <h2 class="match-result-title">Итог матча</h2>
+  <div class="icons-wrapper">
+    <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/18747c064caf23ecf09ac68df083dbc3fb0fae665bbacc473694078946681b86?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103"
+      class="icon-score"
+      alt="Match score indicator"
+    />
+    <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/25284f77e0e36e5ee1b79bf65029664c7c09363b30a83b6deefb9db8d6090277?placeholderIfAbsent=true&apiKey=95a887375cb24fef8e2ac21e00124103"
+      class="icon-result"
+      alt="Match result status"
+    />
+  </div>
+</section>
+<button class="add-match-button" tabindex="0" aria-label="Add match">
+  Добавить матч
+</button>
           </div>
+          
     
           <section class="calendar-container">
             <div class="calendar-wrapper">
